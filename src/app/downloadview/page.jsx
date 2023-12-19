@@ -82,8 +82,8 @@ const Downloadview = () => {
       {/* <Header/> */}
       <div className="containerTwo">
         <h1 className="text-center text-zinc-50 text-xl mb-10 font-extrabold flex">
-          <p> GYM</p>
-          <p className="text-appOrange">AI</p>
+          <span> GYM</span>
+          <span className="text-appOrange">AI</span>
         </h1>
 
         <div className="justify-center text-center">
@@ -92,32 +92,7 @@ const Downloadview = () => {
           </h1>
 
           <div>
-            {/* <Button variant="secondary" onClick={handleShow}>
-              Routine
-            </Button>
-
-            <Modal className="text-black" show={show} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>Making the best routine 4U</Modal.Title>
-              </Modal.Header>
-              <Modal.Body className="justify-center text-center">
-                {loading ? (
-                  <Spinner animation="border" role="status">
-                    <span className="text-black visually-hidden">
-                      Loading...
-                    </span>
-                  </Spinner>
-                ) : (
-                  <p>Routine: {respuesta}</p>
-                )}
-              </Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                  Close
-                </Button>
-              </Modal.Footer>
-            </Modal> */}
-            {/* /////////////////////////////////////////// */}
+            
             <button
               onClick={() => {
                 setOpen(true);
@@ -173,7 +148,7 @@ const Downloadview = () => {
                                 Creating Routine
                               </Dialog.Title>
                               <div className="mt-2">
-                                <p className="text-sm text-gray-500">
+                                <span className="text-sm text-gray-500">
                                   {loading ? (
                                     <Spinner animation="border" role="status">
                                       <span className="text-black visually-hidden">
@@ -181,9 +156,11 @@ const Downloadview = () => {
                                       </span>
                                     </Spinner>
                                   ) : (
-                                    <p>Routine: {respuesta}</p>
+                                    <>
+                                      <span>Routine: {respuesta}</span>
+                                    </>
                                   )}
-                                </p>
+                                </span>
                               </div>
                             </div>
                           </div>
@@ -196,7 +173,6 @@ const Downloadview = () => {
                           >
                             Close
                           </button>
-                          
                         </div>
                       </Dialog.Panel>
                     </Transition.Child>

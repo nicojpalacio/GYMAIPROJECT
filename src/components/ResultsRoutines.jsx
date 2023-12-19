@@ -64,7 +64,7 @@ const ResultPage = () => {
             >
               {({ loading }) =>
                 loading ? (
-                  <p>Loading Document...</p>
+                  <h3>Loading Document...</h3>
                 ) : (
                   <div className="grid grid-cols-2 mb-3">
                     <ResultCard result={result} />
