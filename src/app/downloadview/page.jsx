@@ -12,7 +12,7 @@ import Modal from "react-bootstrap/Modal";
 import Spinner from "react-bootstrap/Spinner"; // Importa el componente Spinner
 // import "bootstrap/dist/css/bootstrap.min.css";
 import PdfFile from "@/components/PdfFile";
-import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
 // import AnimatedBackground from "@/components/AnimatedBackground";
 import "@/app/downloadview/style.css";
 // import Header from "@/components/Header";

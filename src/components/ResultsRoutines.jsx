@@ -3,7 +3,7 @@ import ResultCard from '@/components/ResultCard';
 
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
 
 import { BsFiletypePdf } from "react-icons/bs";
 import PdfResults from "@/components/PdfResults";
