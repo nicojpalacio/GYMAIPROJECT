@@ -200,6 +200,21 @@ const Downloadview = () => {
             }
           </PDFDownloadLink>
           <BsFiletypePdf style={{ fontSize: "40px" }} />
+          {/* <PDFDownloadLink
+            document={<PdfFile content={respuesta} />}
+            fileName='document'
+          >
+            {({ blob, url, loading, error }) =>
+              loading ? (
+                <span>Loading...</span>
+              ) : (
+                <button className="border-2 bg-custom-sky-blue border-custom-blue rounded-md py-2 px-4 flex justify-center items-center gap-2 hover:bg-custom-dark-blue transition duration-300 ease-in-out">
+                  
+                  <span className="text-black">Descargar PDF</span>
+                </button>
+              )
+            }
+          </PDFDownloadLink> */}
         </div>
       </div>
 
