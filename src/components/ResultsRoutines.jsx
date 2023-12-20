@@ -58,7 +58,7 @@ const ResultPage = () => {
       <ul className="text-orange-600 mt-20 text-bold">
         {results.map((result) => (
           <li className=" hover:bg-orange-400 md:text-2xl" key={result.id}>
-            <PDFDownloadLink
+            {/* <PDFDownloadLink
               document={<PdfResults result={result} />}
               filename="FORM"
             >
@@ -74,7 +74,7 @@ const ResultPage = () => {
                   </div>
                 )
               }
-            </PDFDownloadLink>
+            </PDFDownloadLink> */}
           </li>
         ))}
       </ul>

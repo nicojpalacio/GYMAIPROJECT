@@ -187,7 +187,7 @@ const Downloadview = () => {
         </div>
 
         <div className="flex">
-          <PDFDownloadLink
+          {/* <PDFDownloadLink
             document={<PdfFile respuesta={respuesta} />}
             filename="FORM"
           >
@@ -199,10 +199,10 @@ const Downloadview = () => {
               )
             }
           </PDFDownloadLink>
-          <BsFiletypePdf style={{ fontSize: "40px" }} />
-          {/* <PDFDownloadLink
-            document={<PdfFile content={respuesta} />}
-            fileName='document'
+          <BsFiletypePdf style={{ fontSize: "40px" }} /> */}
+          <PDFDownloadLink
+            document={<PdfFile respuesta={respuesta} />}
+            fileName='rutina'
           >
             {({ blob, url, loading, error }) =>
               loading ? (
@@ -214,7 +214,7 @@ const Downloadview = () => {
                 </button>
               )
             }
-          </PDFDownloadLink> */}
+          </PDFDownloadLink>
         </div>
       </div>
 
