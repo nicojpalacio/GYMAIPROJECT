@@ -32,7 +32,7 @@ const SigninForm = () => {
     res.ok
       ? (toast.success("Welcome!!"),
         reset(),
-        "continue.html",
+        // "continue.html",
         router.push("/create"),
         router.refresh())
       : toast.error(res.error);

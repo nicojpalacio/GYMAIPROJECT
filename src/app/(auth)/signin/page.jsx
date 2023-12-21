@@ -5,11 +5,11 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
 
 const Signin = async () => {
-  // const session = await getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
 
-  // if (session) {
-  //   redirect("/create");
-  // }
+  if (session) {
+    redirect("/create");
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 ">
