@@ -76,6 +76,11 @@ const Downloadview = () => {
   const [open, setOpen] = useState(false);
 
   const cancelButtonRef = useRef(null);
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   return (
     <div className="container-bg">
@@ -200,6 +205,7 @@ const Downloadview = () => {
             }
           </PDFDownloadLink>
           <BsFiletypePdf style={{ fontSize: "40px" }} /> */}
+          {isClient && (
           <PDFDownloadLink
             document={<PdfFile respuesta={respuesta} />}
             fileName='rutina'
@@ -215,6 +221,7 @@ const Downloadview = () => {
               )
             }
           </PDFDownloadLink>
+          )}
         </div>
       </div>
 
