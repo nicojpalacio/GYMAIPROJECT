@@ -31,10 +31,10 @@ const SigninForm = () => {
 
     res.ok
       ? (toast.success("Welcome!!"),
-        reset(),
-        "continue.html",
-        router.push("/create"),
-        router.refresh())
+      // "continue.html",
+      reset(),
+      router.push("/results"),
+      router.refresh())
       : toast.error(res.error);
   });
   return (
