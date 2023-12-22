@@ -19,7 +19,7 @@ async function loadResults(session) {
       throw new Error("User or user ID is undefined");
     }
 
-    const res = await fetch(`http://localhost:3000/api/routine/${user.id}`);
+    const res = await fetch(`/api/routine/${user.id}`);
     if (!res.ok) {
       throw new Error("Failed to fetch results");
     }
@@ -58,7 +58,7 @@ const ResultPage = () => {
       <ul className="text-orange-600 mt-20 text-bold">
         {results.map((result) => (
           <li className=" hover:bg-orange-400 md:text-2xl" key={result.id}>
-            {/* <PDFDownloadLink
+            <PDFDownloadLink
               document={<PdfResults result={result} />}
               filename="FORM"
             >
@@ -74,7 +74,7 @@ const ResultPage = () => {
                   </div>
                 )
               }
-            </PDFDownloadLink> */}
+            </PDFDownloadLink>
           </li>
         ))}
       </ul>
