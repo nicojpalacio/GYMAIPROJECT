@@ -17,7 +17,6 @@
     ],
     "rules": {
       "react/react-in-jsx-scope": "off",
-      "react/prop-types":"off",
-      "argsIgnorePattern": "^_"
+      "react/prop-types":"off"     
     }
 }
