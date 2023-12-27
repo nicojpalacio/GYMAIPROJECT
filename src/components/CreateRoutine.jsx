@@ -4,6 +4,8 @@ import Select from 'react-select';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import useStore from '@/app/store/selectroutine';
+import { Toaster, toast } from "react-hot-toast";
+
 
 
 const InputView = () => {
@@ -67,12 +69,17 @@ const InputView = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    if(!selectedBodyPart || !selectedObjective) {
+        toast.error('Select all fields!!');
+    }else {
+    
+
     const selectedValues = {
       bodyPart: selectedBodyPart,
       objective: selectedObjective,
     };
 
-    console.log('Selected Values:', selectedValues);
+    // console.log('Selected Values:', selectedValues);
 
     if (selectedValues){
       router.push("/downloadview");
@@ -81,41 +88,44 @@ const InputView = () => {
       // Actualizar el estado global con setSelectedValues
       setSelectedValues(selectedValues);
     }
+  }
   };
 
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white">
       <div className="text-center mb-6">
-        <h1 className="text-zinc-50 text-xl font-extrabold">CREATE YOUR PLAN</h1>
-        <div className="bg-appOrange px-4 py-2 rounded-full">Select your options</div>
+        <h1 className="text-zinc-50 text-xl font-extrabold mb-3">CREATE YOUR PLAN</h1>
+        <div className="bg-orange-800 px-4 py-2 rounded-full">Select your options</div>
       </div>
       <form className="w-4/5 max-w-md" onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-white font-bold mb-2">Body parts</label>
+          <label className="block text-white font-bold mb-2">Body parts
           <Select
             options={bodyPartsOptions}
             className=" text-black"
             placeholder="Select Body Part"
             onChange={handleBodyPartChange}
           />
+          </label>
         </div>
         <div className="mb-6">
-          <label className="block text-white font-bold mb-2">Objective</label>
+          <label className="block text-white font-bold mb-2">Objective
           <Select
             options={objectivesOptions}
             className=" text-black"
             placeholder="Select Objective"
             onChange={handleObjectiveChange}
           />
+          </label>
         </div>
         <div className="flex justify-center items-center">
-          <button className="rounded-full bg-appOrange text-gray-50 text-3xl font-semibold px-6 py-2" type="submit">
+          <button className="text-zinc-50 text-2xl px-6 py-4 mb-4 mt-3 font-semibold rounded-lg bg-appOrangeButton hover:shadow-inner transform hover:scale-110 hover:bg-opacity-50 transition ease-out duration-300 w-full" type="submit">
             Submit
           </button>
         </div>
       </form>
-
+      <Toaster />
     </div>
   );
 };

@@ -55,9 +55,9 @@ const ResultPage = () => {
         <h2 className="text-gray-900">History</h2>
       </div>
 
-      <ul className="text-orange-600 mt-20 text-bold">
+      <ul className="text-orange-400 mt-20 text-bold">
         {results.map((result) => (
-          <li className=" hover:bg-orange-400 md:text-2xl" key={result.id}>
+          <li className=" hover:bg-orange-600 md:text-2xl" key={result.id}>
             <PDFDownloadLink
               document={<PdfResults result={result} />}
               filename="FORM"

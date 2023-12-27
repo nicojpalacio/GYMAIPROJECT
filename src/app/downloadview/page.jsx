@@ -28,10 +28,7 @@ const Downloadview = () => {
 
   const apiUrl = "api/routine"; // Reemplaza con la URL real de tu API
   const { data: session } = useSession();
-  const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(true); // Nuevo estado para manejar la carga
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const sendResponseToPrisma = async (data) => {
     try {
@@ -102,6 +99,7 @@ const Downloadview = () => {
               onClick={() => {
                 setOpen(true);
               }}
+              type="submit"
             >
               Routine
             </button>
@@ -185,10 +183,9 @@ const Downloadview = () => {
                 </div>
               </Dialog>
             </Transition.Root>
-            {/* /////////////////////////////////////////// */}
           </div>
 
-          <h1 className="font-extrabold text-xl text-slate-800">FOR YOU</h1>
+          <h1 className="font-extrabold text-xl text-slate-400">FOR YOU</h1>
         </div>
 
         <div className="flex">

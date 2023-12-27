@@ -8,13 +8,13 @@ const DesktopMenu = ({ session, navbar, setNavbar }) => (
         navbar ? "p-12 md:p-0 block" : "hidden"
       }`}
     >
-      <ul className="h-screen md:h-auto items-center justify-center md:flex">
+      <div className="h-screen md:h-auto items-center justify-center md:flex">
         {!session?.user ? (
           <GuestMenu setNavbar={setNavbar} />
         ) : (
           <UserMenu setNavbar={setNavbar} />
         )}
-      </ul>
+      </div>
     </div>
   </div>
 );
