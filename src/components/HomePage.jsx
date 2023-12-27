@@ -11,7 +11,7 @@ const HomePage = () => {
       </div>
 
       <div className="mt-8 space-y-4 w-full">
-        <Link href="/authview">
+        <Link href="/signup">
           <button className="bg-appOrange text-gray-50 text-xl font-semibold px-6 py-2 rounded-full w-full">
             Get Started
           </button>
