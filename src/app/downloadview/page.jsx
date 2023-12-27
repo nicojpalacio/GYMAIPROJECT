@@ -98,7 +98,7 @@ const Downloadview = () => {
 
           <div>
             
-            <button
+            <button className=" border rounded-md border-white p-2"
               onClick={() => {
                 setOpen(true);
               }}
@@ -221,6 +221,7 @@ const Downloadview = () => {
               )
             }
           </PDFDownloadLink>
+          
           )}
         </div>
       </div>
