@@ -33,7 +33,7 @@ const SigninForm = () => {
       ? (toast.success("Welcome!!"),
       // "continue.html",
       reset(),
-      router.push("/results"),
+      router.push("/create"),
       router.refresh())
       : toast.error(res.error);
   });
